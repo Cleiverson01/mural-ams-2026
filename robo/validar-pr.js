@@ -53,10 +53,19 @@ function escreverComentario({ problemas, cartao, refazer }) {
     ].join('\n');
   }
   const quantos = problemas.filter((p) => p.startsWith('❌')).length;
+  // O arquivo errado continua na main do fork do aluno: sem apagar lá, o PR novo leva o erro junto.
   const comoConsertar = refazer
-    ? '**Como consertar:** o jeito mais fácil é recomeçar. Lá embaixo, clique em **Close pull request**. ' +
-      'Depois, entre na pasta `cartoes/` do projeto e crie **só** o seu arquivo (Add file → Create new file).'
-    : '**Como consertar:** clique na aba **Files changed** aqui em cima, depois nos **três pontinhos (⋯)** do arquivo ' +
+    ? [
+        '**Como consertar:** o jeito mais fácil é recomeçar.',
+        '',
+        '1. Lá embaixo, clique em **Close pull request**.',
+        '2. Vá para o **seu fork** (a sua cópia do projeto, que tem o seu nome de usuário no topo) e apague o arquivo ' +
+          'que ficou errado: abra o arquivo → **três pontinhos (⋯)** → **Delete file** → **Commit changes**. ' +
+          'Se você mexeu no cartão de outra pessoa, chame o professor.',
+        '3. Ainda no seu fork, entre na pasta `cartoes/` e crie **só** o seu arquivo (**Add file** → **Create new file**).',
+        '4. Clique em **Contribute** → **Open pull request** → **Create pull request**. Eu confiro de novo!',
+      ].join('\n')
+    :'**Como consertar:** clique na aba **Files changed** aqui em cima, depois nos **três pontinhos (⋯)** do arquivo ' +
       'e em **Edit file**. Arrume, clique em **Commit changes** e pronto: eu confiro de novo sozinho!';
   return [
     MARCA,

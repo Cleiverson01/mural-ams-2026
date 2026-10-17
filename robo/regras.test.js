@@ -147,9 +147,11 @@ test('analisarPR: fluxo completo com arquivo de mentira', async () => {
   const virgula = await pr('{ "nome": "Ana", "emoji": "🎮", "frase": "x", "cor": "rosa", }');
   assert.match(escreverComentario(virgula), /1 coisinha/);
 
-  // Mexeu fora de cartoes/: a orientação é fechar e recomeçar.
+  // Mexeu fora de cartoes/: a orientação é fechar, apagar o arquivo errado no fork e recomeçar.
   const fora = await pr(json(bom), { arquivos: [{ caminho: 'README.md', situacao: 'modified' }] });
   assert.match(escreverComentario(fora), /Close pull request/);
+  assert.match(escreverComentario(fora), /Delete file/);
+  assert.match(escreverComentario(fora), /Contribute/);
 
   temMensagem((await pr(json(bom), { jaExiste: true })).problemas, 'Já existe um cartão');
   temMensagem((await pr(json(bom), { arquivos: [{ caminho: 'site/mural.js', situacao: 'modified' }] })).problemas, 'site/mural.js');

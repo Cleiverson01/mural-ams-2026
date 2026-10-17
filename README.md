@@ -32,12 +32,13 @@ O mais legal é **como** o cartão chega lá. Você vai usar o mesmo caminho que
 
 > Você precisa estar **logado** no GitHub. Não tem conta? Crie em https://github.com/signup (é grátis).
 
-**1. Abra a pasta de cartões**
-Entre em https://github.com/Medinagui/mural-ams-2026/tree/main/cartoes
+**1. Faça a sua cópia do projeto (fork)**
+Entre em https://github.com/Medinagui/mural-ams-2026 e clique no botão **Fork**, no canto de cima à direita. Na tela seguinte, clique em **Create fork**.
+Pronto: agora você está na **sua cópia**. Repare que no topo aparece o **seu nome de usuário** antes de `mural-ams-2026`. Os próximos passos são todos aqui, na sua cópia.
 
-**2. Crie um arquivo novo**
-Clique no botão **Add file** → **Create new file**.
-Se aparecer um aviso dizendo que você precisa fazer um *fork*, clique em **Fork this repository**. (É o GitHub criando a sua cópia do projeto. Normal!)
+**2. Entre na pasta de cartões e crie um arquivo novo**
+Clique na pasta **`cartoes`**. Lá dentro, clique em **Add file** → **Create new file**.
+⚠️ O arquivo **tem** que ficar dentro da pasta `cartoes/`. Se ficar fora, o robô não aceita.
 
 **3. Dê nome ao arquivo**
 No campo do nome, escreva o seu **primeiro nome**, em **letras minúsculas**, **sem acento** e terminando em **`.json`**:
@@ -63,16 +64,17 @@ Copie o modelo abaixo, cole na área grande de texto e troque o que está entre 
 ⚠️ Mantenha as **aspas** `"` e as **vírgulas** no fim das linhas (menos na última linha antes do `}`).
 
 **5. Salve (commit)**
-Clique em **Commit changes…** (ou **Propose changes**). Na mensagem, escreva algo como `Cartão da Ana` e confirme.
+Clique em **Commit changes…**. Na janela que abrir, escreva uma mensagem como `Cartão da Ana`, deixe marcado **Commit directly to the main branch** e clique em **Commit changes**.
 
 **6. Abra o pull request**
-O GitHub vai mostrar uma página comparando as mudanças. Clique em **Create pull request** e, na tela seguinte, em **Create pull request** de novo.
+Ainda na sua cópia, aparece uma faixa dizendo **"This branch is 1 commit ahead of Medinagui/mural-ams-2026:main"** (a sua cópia tem 1 mudança a mais que o projeto original). Na mesma faixa, clique em **Contribute** → **Open pull request**. Na tela seguinte, clique em **Create pull request**.
 
 **7. Espere o robô 🤖**
 Em alguns segundos, o robô comenta no seu pull request:
 
 - ✅ **Tudo certo!** Agora é só esperar o professor aprovar.
 - 🔧 **Quase lá!** O robô diz exatamente o que arrumar. Para consertar: aba **Files changed** → **três pontinhos (⋯)** do arquivo → **Edit file** → arrume → **Commit changes**. O robô confere de novo sozinho.
+- 🔁 **Recomeçar:** se você criou o arquivo fora da pasta `cartoes/` (ou mexeu em outro arquivo), o robô explica passo a passo: fechar o pull request, apagar o arquivo errado na sua cópia e criar de novo no lugar certo.
 
 **8. Olhe para a TV 📺**
 Quando o professor fizer o merge, em mais ou menos um minuto o seu cartão aparece no mural!
