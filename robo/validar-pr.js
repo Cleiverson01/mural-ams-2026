@@ -49,7 +49,7 @@ function escreverComentario({ problemas, cartao, refazer }) {
       `> ${cartao.emoji} **${limpar(cartao.nome)}** · cor ${cartao.cor}`,
       `> ${limpar(cartao.frase)}`,
       '',
-      'Agora é só esperar o professor aprovar. Quando ele fizer o merge, seu cartão aparece no mural! 🎉',
+      'Agora é só esperar o instrutor aprovar. Quando ele fizer o merge, seu cartão aparece no mural! 🎉',
     ].join('\n');
   }
   const quantos = problemas.filter((p) => p.startsWith('❌')).length;
@@ -61,7 +61,7 @@ function escreverComentario({ problemas, cartao, refazer }) {
         '1. Lá embaixo, clique em **Close pull request**.',
         '2. Vá para o **seu fork** (a sua cópia do projeto, que tem o seu nome de usuário no topo) e apague o arquivo ' +
           'que ficou errado: abra o arquivo → **três pontinhos (⋯)** → **Delete file** → **Commit changes**. ' +
-          'Se você mexeu no cartão de outra pessoa, chame o professor.',
+          'Se você mexeu no cartão de outra pessoa, chame o instrutor.',
         '3. Ainda no seu fork, entre na pasta `cartoes/` e crie **só** o seu arquivo (**Add file** → **Create new file**).',
         '4. Clique em **Contribute** → **Open pull request** → **Create pull request**. Eu confiro de novo!',
       ].join('\n')

@@ -9,7 +9,7 @@ O mais legal é **como** o cartão chega lá. Você vai usar o mesmo caminho que
 1. Você **cria um arquivo** com o seu cartão.
 2. Você **pede para juntar** o seu arquivo ao projeto (isso se chama *pull request*).
 3. Um **robô** confere se está tudo certo e responde ✅ ou ❌.
-4. O professor **revisa e aprova** (isso se chama *merge*).
+4. O instrutor **revisa e aprova** (isso se chama *merge*).
 5. O site **se atualiza sozinho** e o seu cartão aparece no mural. 🎉
 
 ---
@@ -20,9 +20,9 @@ O mais legal é **como** o cartão chega lá. Você vai usar o mesmo caminho que
 |---|---|---|
 | **Repositório** (repo) | A pasta do projeto, guardada no GitHub, com todo o histórico | Uma pasta compartilhada que lembra de tudo |
 | **Commit** | Salvar uma mudança, com uma mensagem dizendo o que mudou | Salvar o jogo (checkpoint) |
-| **Fork** | A sua cópia do projeto, na sua conta | Tirar xerox do caderno de um colega pra escrever na sua cópia |
+| **Fork** | A sua cópia do projeto, na sua conta | "Fazer uma cópia" de um Google Docs de outra pessoa: a cópia é sua, o original continua igual |
 | **Pull request** (PR) | Pedido para juntar a sua mudança ao projeto original | Entregar o trabalho pro professor corrigir |
-| **Merge** | Juntar de vez a mudança ao projeto | O professor colar o seu trabalho no mural da sala |
+| **Merge** | Juntar de vez a mudança ao projeto | O trabalho corrigido indo para o mural da sala |
 | **O robô** (GitHub Actions) | Um programa que roda sozinho a cada PR e confere as regras | O fiscal da prova que confere se você preencheu o nome |
 | **GitHub Pages** | Serviço do GitHub que transforma o projeto em site | A vitrine da loja |
 
@@ -72,12 +72,12 @@ Ainda na sua cópia, aparece uma faixa dizendo **"This branch is 1 commit ahead 
 **7. Espere o robô 🤖**
 Em alguns segundos, o robô comenta no seu pull request:
 
-- ✅ **Tudo certo!** Agora é só esperar o professor aprovar.
+- ✅ **Tudo certo!** Agora é só esperar o instrutor aprovar.
 - 🔧 **Quase lá!** O robô diz exatamente o que arrumar. Para consertar: aba **Files changed** → **três pontinhos (⋯)** do arquivo → **Edit file** → arrume → **Commit changes**. O robô confere de novo sozinho.
 - 🔁 **Recomeçar:** se você criou o arquivo fora da pasta `cartoes/` (ou mexeu em outro arquivo), o robô explica passo a passo: fechar o pull request, apagar o arquivo errado na sua cópia e criar de novo no lugar certo.
 
 **8. Olhe para a TV 📺**
-Quando o professor fizer o merge, em mais ou menos um minuto o seu cartão aparece no mural!
+Quando o instrutor fizer o merge, em mais ou menos um minuto o seu cartão aparece no mural!
 
 ---
 
@@ -115,7 +115,7 @@ robo/               ← o "cérebro" do robô, escrito em JavaScript (Node.js)
 ```
 
 - **`.github/workflows/robo.yml`**: quando alguém abre um pull request, o GitHub liga um computador na nuvem, roda o robô e mostra ✅ ou ❌. Isso é **CI** (*Integração Contínua*): conferir cada mudança antes de juntar.
-- **`.github/workflows/publicar.yml`**: quando o professor faz o merge, o GitHub monta o site e coloca no ar. Isso é **CD** (*Entrega Contínua*): publicar sozinho, sem ninguém copiar arquivo na mão.
+- **`.github/workflows/publicar.yml`**: quando o instrutor faz o merge, o GitHub monta o site e coloca no ar. Isso é **CD** (*Entrega Contínua*): publicar sozinho, sem ninguém copiar arquivo na mão.
 
 Quer ver o mural no seu computador? Com o [Node.js](https://nodejs.org) instalado, dentro desta pasta:
 
