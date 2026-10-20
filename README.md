@@ -3,6 +3,7 @@
 Um mural na internet onde **cada aluno coloca o seu cartão**: nome, um emoji e uma frase sobre o que quer criar com tecnologia.
 
 👉 **Veja o mural no ar:** https://medinagui.github.io/mural-ams-2026/
+📄 **Slides e apostila da aula:** [slides.pdf](docs/slides.pdf) · [apostila.pdf](docs/apostila.pdf)
 
 O mais legal é **como** o cartão chega lá. Você vai usar o mesmo caminho que programadores do mundo todo usam para colaborar em projetos de verdade:
 
